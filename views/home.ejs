@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+
+<%- include('partials/head')  %> 
+
+    <div class="container-fluid intro">
+        <div class="row">
+          <div class = "col-md-4">
+            <img class="page-logo rounded mx-auto mx-sm-0 d-block p-4" src="/img/toprobotlogotxt3.png">
+          </div>
+          <div class="col-md-4 align-self-center pl-5">
+            <h1 class="center-title">
+              ToPRobot: Open source agricultural automation
+            </h1>
+            <h2 class="center-title pb-4">
+              Finding solutions for community owned, environmentally friendly technology.
+            </h2>
+          </div>
+          <div class="col-md-4 align-self-center pr-3">
+            <ul class="display-6">
+              <li> 3D printed parts, recycled plastics </li>
+              <li> Organic, locally sourced products </li>
+              <li> Exploration of ethical agriculture</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid donation pb-3">
+        <div class="container text-center">
+          <h4 class="display-5">Who are we? </h4>
+          <p class="lead">We are a small family team with a variety of STEM backgrounds, from imaging to engineering. We are exploring several projects for ethical, environmentally friendly production that we plan to make available for community based, open source use. </p>
+        </div>
+        <div id="carouselExampleInterval" class="carousel slide col-lg-10 mx-auto" data-bs-ride="carousel">
+          <div class="carousel-inner rounded">
+            <% var activelabel = 0;  %>
+            <% for(let projects of projectlist) { %>
+              <% if (activelabel) { %>
+                <div class="carousel-item" data-bs-interval="5000">
+              <% } else { %>
+                <div class="carousel-item active" data-bs-interval="5000">
+                <% activelabel = 1; %> 
+              <% }; %>
+              <% projecttitle = projects.name.toLowerCase().replace(/\.\s*([a-z])|^[a-z]/gm, s => s.toUpperCase()); %> 
+                  <img src="/img/<%= projects.name %>.jpg " class="w-100" alt="...">
+                  <div class="carousel-caption d-block carouselbox ml-sm-0">
+                    <h5 class="mt-2"><%= projecttitle %></h5>
+                    <p><%= projects.blurb %>. </p>
+                    <a class="btn btn-success mb-2" href="/projects/<%= projects.name %>" role="button">Read more</a>
+                  </div>
+                </div> 
+            <% };  %>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        </div>
+    </div>
+    </body>
+
+</html>

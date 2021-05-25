@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Roadmap</title>
+
+<%- include('partials/head')  %> 
+
+        <div class="jumbotron jumbotron-fluid mt-5 pt-5">
+            <div class="container text-center timetableintro">
+                <h1 class="display-3">Roadmap</h1>
+                <p class="display-6"> A brief overview of our ongoing projects.</p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <select class="custom-select w-100 text-center p-2 banana-bg" data-target=".my-info-1">
+                        <% var projecttitle = ''; %> 
+                        <% for(let projects of projectlist) { %>
+                            <% projecttitle = projects.name.toLowerCase().replace(/\.\s*([a-z])|^[a-z]/gm, s => s.toUpperCase()); %>
+                            <li><a class="dropdown-item" href="/projects/<%= projects.name %>"><%= projecttitle %></a></li>
+                            <option value="<%= projects.name  %>" data-show=".<%= projects.name  %>"><%= projecttitle  %></option>
+                        <% };  %>
+                    </select>
+                </div>
+            </div>
+            <div class="my-info-1">
+                <div class="row mt-3 coffee hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="completed">Completed</div>
+                    <div class="col-md-2 card ">Chassis for a coffee picking robot</div>
+                    <div class="col-md-2 card">Preliminary designs for a gripper</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 coffee hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="in-progress">In-progress</div>
+                    <div class="col-md-2 card">Vision development for robot camera</div>
+                    <div class="col-md-2 card">Prototyping for a farming toolkit</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 coffee hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="to-do">To-do</div>
+                    <div class="col-md-2 card">Field testing during harvest season</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 coffee hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="potential-to-do">Future possibilities</div>
+                    <div class="col-md-2 card">Semantic labelling with computer vision</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 bamboo hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="completed">Completed</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 bamboo hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="in-progress">In-progress</div>
+                    <div class="col-md-2 card">Preliminary investigation of enzyme-based textile production</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 bamboo hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center my-auto arrow-right" id="to-do">To-do</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 bamboo hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center my-auto arrow-right" id="potential-to-do">Future possibilities</div>
+                    <div class="col-md-2 card">Investigation of homegrown methods for ethical textiles</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 community hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="completed">Completed</div>
+                    <div class="col-md-2 card">Cultivated an array of entertaining science demos for youths</div>
+                    <div class="col-md-2 card">Worked with community to offer small scale science programs</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 community hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="in-progress">In-progress</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 community hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="to-do">To-do</div>
+                    <div class="col-md-2 card">Establish a museum that would make science demos available to the community</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 community hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="potential-to-do">Future possibilities</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 bananas hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="completed">Completed</div>
+                    <div class="col-md-2 card">Small scale production of banana bread with local ingredients</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 bananas hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="in-progress">In-progress</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 bananas hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="to-do">To-do</div>
+                    <div class="col-md-2 card">Shipping and scaling up production</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row mt-3 bananas hide">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 p-1 card text-center arrow-right my-auto" id="potential-to-do">Future possibilities</div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>         
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Donations</title>
+
+<%- include('partials/head')  %> 
+        <div class="donationdiv">
+            <h1> DONATIONS </h1>
+            <h2>Why do we need donations? </h2>
+            <p>Our mission statement is to create technology that can be owned and produced by local farmers. We're a small family team covering the costs of prototyping and development out of pocket - no big investors, no plans to sell our tech at a high cost. Every bit of donation lets us devote more time and materials to putting tech on the market for small farms and co-op ownership.</p>
+            <h2>How to donate:</h2>
+            <h3 class="p-2">Read our medium articles/Patreon:</h3>
+            <button type="button" class="btn btn-warning">Subscribe</button>
+            <h3 class="p-2">Paypal:</h3>
+            <form action="https://www.paypal.com/donate" method="post" target="_top">
+                <input type="hidden" name="business" value="astra.viv@gmail.com" />
+                <input type="hidden" name="currency_code" value="USD" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+        </div>         
+    </body>
+</html>

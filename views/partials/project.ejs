@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% var projecttitle = project.toLowerCase().replace(/\.\s*([a-z])|^[a-z]/gm, s => s.toUpperCase()); %> 
+        <title><%= projecttitle %> </title>
+        <% var projobj = projectlist.filter(function(item) { return item.name === project; })[0]; %>
+  
+<%- include('head')  %>
+
+
+<div class="container-fluid intro">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class = "col-md-4">
+      <img class="page-logo rounded mx-auto mx-sm-0 d-block p-4" src="/img/<%= project %>logo.png">
+    </div>
+    <div class="col-md-4 align-self-center">
+      <ul class="display-6">
+        <li> <%= projobj.blurb %> </li>
+        <li> <%= projobj.keypoints[0] %> </li>
+        <li> <%= projobj.keypoints[1] %> </li>
+      </ul>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
