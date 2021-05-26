@@ -45,7 +45,7 @@ const projectlist = [
     {name:'bamboo', 
     blurb:'Ecofriendly and humane textile production',
     keypoints: ['Ezyme-based production of textiles','Moving away from cotton and towards bamboo']},
-    {name:'community', 
+    {name:'museum', 
     blurb:'Plans for a science museum in Ponce',
     keypoints: ['Creating fun science demos','Making science open for underserved communities']}
 ];
@@ -65,9 +65,9 @@ app.get('/projects/bamboo', (req, res) => {
     res.render('bamboo', { project, projectlist });
 })
 
-app.get('/projects/community', (req, res) => {
-    const project = 'community';
-    res.render('community', { project, projectlist });
+app.get('/projects/museum', (req, res) => {
+    const project = 'museum';
+    res.render('museum', { project, projectlist });
 })
 
 app.listen(3000, () => {
