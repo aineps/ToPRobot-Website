@@ -44,11 +44,12 @@ const projectlist = [
     keypoints: ['Using local ingredients from farms in the community','Now available for local purchase']},
     {name:'bamboo', 
     blurb:'Ecofriendly and humane textile production',
-    keypoints: ['Ezyme-based production of textiles','Moving away from cotton and towards bamboo']},
-    {name:'museum', 
-    blurb:'Plans for a science museum in Ponce',
-    keypoints: ['Creating fun science demos','Making science open for underserved communities']}
+    keypoints: ['Enzyme-based production of textiles','Moving away from cotton and towards bamboo']},
 ];
+
+// {name:'museum', 
+//     blurb:'Plans for a science museum in Ponce',
+//     keypoints: ['Creating fun science demos','Making science open for underserved communities']}
 
 app.get('/projects/coffee', (req, res) => {
     const project = 'coffee';
@@ -65,10 +66,10 @@ app.get('/projects/bamboo', (req, res) => {
     res.render('bamboo', { project, projectlist });
 })
 
-app.get('/projects/museum', (req, res) => {
-    const project = 'museum';
-    res.render('museum', { project, projectlist });
-})
+// app.get('/projects/museum', (req, res) => {
+//     const project = 'museum';
+//     res.render('museum', { project, projectlist });
+// })
 
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000")
