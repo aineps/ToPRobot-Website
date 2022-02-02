@@ -42,9 +42,9 @@ const projectlist = [
     {name:'bananas', 
     blurb:'Organic and delicious banana bread',
     keypoints: ['Using local ingredients from farms in the community','Now available for local purchase']},
-    {name:'bamboo', 
-    blurb:'Ecofriendly and humane textile production',
-    keypoints: ['Enzyme-based production of textiles','Moving away from cotton and towards bamboo']},
+    // {name:'bamboo', 
+    // blurb:'Ecofriendly and humane textile production',
+    // keypoints: ['Enzyme-based production of textiles','Moving away from cotton and towards bamboo']}
 ];
 
 // {name:'museum', 
