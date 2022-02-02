@@ -12,7 +12,11 @@
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "ejs": "^3.1.6",
+<<<<<<< HEAD
     "express": "^4.17.2",
+=======
+    "express": "^4.17.1",
+>>>>>>> e7020dde2ee5efbca4767117ee2783c54a8c2ded
     "js-cookie": "^2.2.1",
     "mongoose": "^5.12.2",
     "mysql2": "^2.2.5",
