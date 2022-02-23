@@ -8,30 +8,53 @@
 
     <div class="container-fluid intro">
         <div class="row">
-          <div class = "col-md-4">
-            <img class="page-logo rounded mx-auto mx-sm-0 d-block p-4" src="/img/coffeelogo.png">
+          <div id="coffeestart" class = "col-md-4">
+            <a href="/projects/coffee">
+              <img class="page-logo rounded mx-auto mx-sm-0 d-block p-4" src="/img/coffeelogo.png">
+            </a>
           </div>
           <div class="col-md-4 align-self-center pl-5">
-            <h1 class="center-title">
-              ToPRobot: Open source agricultural automation
-            </h1>
-            <h2 class="center-title pb-4">
-              Finding solutions for community owned, environmentally friendly technology.
-            </h2>
+            <div id="centertext">
+              <h1 id="homeh1" class="center-title">
+                ToPRobot: Open source agricultural automation
+              </h1>
+              <h2  id="homeh2" class="center-title pb-4">
+                Finding solutions for local, community focused technology and products.
+              </h2>
+            </div>
+            <div id="centertextcoffee" class="display-6">
+              <ul>
+                <li id="coffeeli1">Automated coffee harvesting with computer vision</li>
+                <li id="coffeeli2">Affordable, recycled components</li>
+                <li id="coffeeli3">Enabling local manufacturing for small farms</li>
+              </ul>
+            </div>
+            <div id="centertextbanana" class="display-6">
+              <ul>
+                <li id="bananali1">Organic and delicious banana bread</li>
+                <li id="bananali2">Using local ingredients from farms in the community</li>
+                <li id="bananali3">Available for local purchase!</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-4 align-self-center pr-3">
+          <div class = "col-md-4">
+            <a href="projects/bananas">
+              <img id="bananastart" class="page-logo rounded mx-auto mx-sm-0 d-block p-4" src="/img/bananaslogo.png">
+            </a>
+          </div>
+        </div>
+    </div>
+    <!-- <div class="col-md-4 align-self-center pr-3">
             <ul class="display-6">
               <li> 3D printed parts, recycled plastics </li>
               <li> Organic, locally sourced products </li>
               <li> Exploration of ethical agriculture</li>
             </ul>
-          </div>
-        </div>
-    </div>
+          </div> -->
     <div class="jumbotron jumbotron-fluid donation pb-3">
         <div class="container text-center">
-          <h4 class="display-5">Who are we? </h4>
-          <p class="lead">We are a small family team with a variety of STEM backgrounds, from imaging to engineering. We are exploring several projects for ethical, environmentally friendly production that we plan to make available for community based, open source use. </p>
+          <h4 id="h4qn" class="display-5">Who are we? </h4>
+          <p id="h4asw" class="lead">We are a small family team with a variety of STEM backgrounds, from imaging to engineering. We are exploring several projects for ethical, environmentally friendly production that we plan to make available for community based, open source use. </p>
         </div>
         <div id="carouselExampleInterval" class="carousel slide col-lg-10 mx-auto" data-bs-ride="carousel">
           <div class="carousel-inner rounded">
@@ -65,5 +88,7 @@
         </div>
     </div>
     </body>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/toprobot.js"></script>
 </html>

@@ -1,18 +1,9 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/toprobot.css">
         <link rel="icon" href="/img/coffeeicontransparent.png">
-        <script src="/js/jquery-3.6.0.min.js"></script>
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/toprobot.js"></script>
-        <script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
-        <script type="text/javascript">
-          // Create language switcher instance
-          var lang = new Lang();
-          
-          lang.init({
-            defaultLang: 'en'
-          });
-        </script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="/js/bootstrap.min.js"></script> -->
+        <!-- <script src="/js/toprobot.js"></script> -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
@@ -20,27 +11,40 @@
         <div class="container-fluid">
           <div class="collapse navbar-collapse  d-flex justify-content-around" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex justify-content-around">
-              <li class="nav-item mx-5 px-5">
+              <!-- <li class="nav-item mx-5 px-5">
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li> -->
+              <!-- <li class="nav-item mx-5 px-5">
+                <a class="nav-link" href="/roadmap">Roadmap</a>
+              </li> -->
+              <!-- <li class="nav-item mx-5 px-5">
+                <a class="nav-link" href="/projects/coffee">ToPRobot</a>
               </li>
               <li class="nav-item mx-5 px-5">
-                <a class="nav-link" href="/roadmap">Roadmap</a>
-              </li>
-              <li class="nav-item mx-5 px-5 dropdown">
+                <a class="nav-link" href="/projects/bananas">Guinana</a>
+              </li> -->
+              <!-- <li class="nav-item mx-5 px-5 dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Projects
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <% var projecttitle = ''; %> 
-                <% for(let projects of projectlist) { %>
-                  <% projecttitle = projects.name.toLowerCase().replace(/\.\s*([a-z])|^[a-z]/gm, s => s.toUpperCase()); %>
+                <% # var projecttitle = ''; %> 
+                <% # for(let projects of projectlist) { %>
+                  <% # projecttitle = projects.name.toLowerCase().replace(/\.\s*([a-z])|^[a-z]/gm, s => s.toUpperCase()); %>
                   <li><a class="dropdown-item" href="/projects/<%= projects.name %>"><%= projecttitle %></a></li>
-                <% }; %>
+                <% # }; %>
                 </ul>
-              </li>
-              <li class="nav-item mx-5 px-5">
+              </li> -->
+              <!-- <li class="nav-item mx-5 px-5">
                 <a class="nav-link" href="/donations">Donations</a>
               </li>
+              <li class="nav-item mx-5 px-5 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Language</a>
+                  <ul class="dropdown-menu" aria-lebelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#es" data-reload>Español</a></li>
+                    <li><a class="dropdown-item" href="#eng" data-reload>English</a></li>
+                  </ul>
+              </li> -->
             </ul>
           </div>
         </div>

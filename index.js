@@ -17,8 +17,12 @@ app.use(express.static(path.join(__dirname, '/public')))
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
 
+// app.get('/', (req, res) => {
+//     res.render('home', { projectlist });
+// })
+
 app.get('/', (req, res) => {
-    res.render('home', { projectlist });
+    res.render('construction');
 })
 
 app.get('/roadmap', (req, res) => {
@@ -38,10 +42,10 @@ app.get('/donations', (req, res) => {
 const projectlist = [
     {name:'coffee', 
     blurb:'Automated coffee harvesting with computer vision',
-    keypoints: ['Open-source, recycled components','Enabling local manufacturing for small farms']},
+    keypoints: ['Affordable, recycled components','Enabling local manufacturing for small farms']},
     {name:'bananas', 
     blurb:'Organic and delicious banana bread',
-    keypoints: ['Using local ingredients from farms in the community','Now available for local purchase']},
+    keypoints: ['Using local ingredients from farms in the community','Available for local purchase!']},
     // {name:'bamboo', 
     // blurb:'Ecofriendly and humane textile production',
     // keypoints: ['Enzyme-based production of textiles','Moving away from cotton and towards bamboo']}
